@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Popcorn On-order</title>
+    <script type="text/javascript" src="js/formcalculations.js"></script>
+    <link href="styles/cakeform.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="cakeform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Make your popcorn!</legend>
+                <label >Size Of the Popcorn</label>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />Small sized tub - serves 1 person(Rs.10)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />Medium sized tub - serves 2 person(Rs.20)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />Large sized tub - serves 4 person(Rs.30)</label><br/>
+                <br/>
+                <label >Added flavours</label>
+
+                <select id="filling" name='filling' onchange="calculateTotal()">
+                <option value="None">Select Flavouring</option>
+                <option value="Butter">Butter(Rs.5)</option>
+                <option value="Butter-salted">Butter-salted(Rs.5)</option>
+                <option value="Strawberry">Strawberry(Rs.7)</option>
+                <option value="Caramel">Caramel(Rs.8)</option>
+               </select>
+                <br/>
+                <p>
+                <label for='includecandles' class="inlinelabel">Include Pack Cost(Rs.2)</label>
+               <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+               </p>
+                <div id="totalPrice"></div>
+
+                </fieldset>
+            </div>
+        </div>
+       </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>
